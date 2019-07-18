@@ -1,0 +1,28 @@
+<style>
+h1 {
+  font-family: verdana;
+  /* background-color:#F4A460; */
+
+}
+
+
+}
+body {
+    /* background-color: #FFE4C4; */
+
+    background-image: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+}
+
+body{
+  background-image: url('123.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div{
+border-radius: 20px;
+width: 70%;
+height: 400px;
+margin: 50px auto;
+}
+</style>
