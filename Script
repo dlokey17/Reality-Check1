@@ -1,0 +1,200 @@
+'Introduction': [
+			'centered You are currently experiencing: a young, female Asian American student facing stereotypical backlash.',
+			'clear',
+			'scene black with fadeIn',
+			{'Input': {
+				'Text': 'What is your name?',
+				'Validation': function (input) {
+					return input.trim().length > 0;
+				},
+				'Save': function (input) {
+					this.Storage.set ('PlayerName', input);
+					this.storage ({ player: {name: input} });
+					return true;
+				},
+				'Warning': 'You must enter a name!'
+			}},
+			'centered You know...',
+			'centered At first, I tried really hard...',
+			'particles universe',
+			'centered Then, suddenly, everything started to crumble...',
+			'stop particles',
+			{'Function': {
+				'Apply': function () {
+					this.action ('Particles').particles ('universe').particles.number.value = 10;
+					return true;
+				},
+				'Reverse': function () {
+					this.action ('Particles').particles ('universe').particles.number.value = 0;
+					return true;
+				},
+			}},
+			'particles universe',
+			'centered I thought everything would be fine if I just did my best...',
+			'stop particles',
+			{'Function': {
+				'Apply': function () {
+					this.action ('Particles').particles ('universe').particles.number.value = 20;
+					return true;
+				},
+				'Reverse': function () {
+					this.action ('Particles').particles ('universe').particles.number.value = 10;
+					return true;
+				},
+			}},
+			'particles universe',
+			'centered But I was wrong...',
+			'stop particles',
+			{'Function': {
+				'Apply': function () {
+					this.action ('Particles').particles ('universe').particles.number.value = 50;
+					return true;
+				},
+				'Reverse': function () {
+					this.action ('Particles').particles ('universe').particles.number.value = 20;
+					return true;
+				},
+			}},
+			'particles universe',
+			'centered Society never plays a fair game...',
+			'centered To everyone else...',
+			'stop particles',
+			{'Function': {
+				'Apply': function () {
+					this.action ('Particles').particles ('universe').particles.line_linked.enable = true;
+					return true;
+				},
+				'Reverse': function () {
+					this.action ('Particles').particles ('universe').particles.line_linked.enable = false;
+					return true;
+				},
+			}},
+			'particles universe',
+			'centered I am just another Asian.',
+			'stop particles',
+
+			'play music Theme',
+			{'Function': {
+				'Apply': function () {
+					this.action ('Particles').particles ('universe').particles.number.value = 40;
+					this.action ('Particles').particles ('universe').particles.line_linked.enable = false;
+					return true;
+				},
+				'Reverse': function () {
+					this.action ('Particles').particles ('universe').particles.number.value = 40;
+					this.action ('Particles').particles ('universe').particles.line_linked.enable = true;
+					return true;
+				},
+			}},
+			'particles universe',
+			'scene Classroom',
+			'centered "Alright everybody, class is over."',
+			'centered Chairs scraped against the floor and most of the students began filing out.',
+			'show e Normal center with fadeIn',
+			'e Hey, I have not talked to you much before, but I sit in row 4.',
+
+			{'Input': {
+				'Text': 'What is your classmates name?',
+				'Validation': function (input) {
+					return input.trim ().length > 0;
+				},
+				'Save': function (input) {
+					this.Storage.set ('Evelyn_Name', input);
+					this.storage ({ evelyn_name: input });
+					return true;
+				},
+				'Warning': 'Choose a name for me please.'
+			}},
+			'e "My name is {{evelyn_name}}."',
+			'e "So {{player.name}}, what did you get on the math test?"',
+
+			'p You look down at your paper and see the number 94 circled in red at the top.',
+
+			'p "Oh, I got a 94."',
+
+			'show e Doubt center with fadeIn',
+
+			'e "Wait, seriously?!"',
+			'p "Huh? Is something wrong...?"',
+
+			'show e Happy with fadeIn',
+			'e "Oh my gosh, I cannot believe I did better than {{player.name}}! I need to tell everybody!"',
+
+			'p "What? What do you mean?"',
+
+			'scene hallway',
+			'p You watched as she brushed past you and met up with her friends. Eventually, she also called up her parents.',
+
+			'show e Happy at center with fadeIn',
+
+			'e "Guys, I got a 96 on my test! I even did better than {{player.name}}! You know, the Asian!"',
+
+			'e "I thought Asians were really good at math or something."',
+
+			'e "I guess {{player.name}} is really dumb haha!"',
+			'p You felt extremely uncomfortable and self conscious that she had categorized your academics based on your background.',
+			'p Am I required to do better just because of who I am...?',
+
+			'scene linkon',
+			'centered It is your first day of High School.',
+			'centered You parents pressured you into applying for Linkon Tech, a super prestigious high school.',
+			'p You are walking down the hallway towards the cafeteria during lunch. Though you have not made many friends yet, you managed to strike up a conversation with a small group of people.',
+
+			'scene cafeteria',
+			'p You sit down at a table with them after grabbing lunch from the kitchen.',
+			'b1 "Ugh, this chicken sucks man. What did they put in here? It tastes like charred cat or something, bleh."',
+			'b1 He and the other people in the group snicker while shooting a few glances at you.',
+			'b2 "Hey new girl, I bet you know about this a lot better than us. Is this what your cats at home taste like?"',
+			'p You look at him with an utterly perplexed expression, unwilling to believe that this conversation was headed where it was.',
+			'b2 "You know, back in China?"',
+			'b1 "Man, you Asians are cruel for eating pets."',
+			'p You stared at him, appalled.',
+			'p First of all, you are not even from China! Your parents are from Japan.',
+			'p Second, the US is your home. You have never even been to Asia!',
+			'p And third of all, not everybody in Asia eats exotic meat. In fact, the majority do not!"',
+			'p Shell shocked, you turn to the bigoted young man sitting in front of you with disbelief in your eyes.',
+			'p "It is truly appalling that someone could be so ignorant."',
+
+			'scene cafeteria2',
+			'p You get up and walk away, hearing snarky remarks coming from them as you leave.',
+			'p You run outside and bite your lip, holding back frustrated tears.',
+			'p This kind of thing has not happened just once. There have been countless moments in which ridicule has followed your name just because of assumptions like that.',
+			'p And no matter how hard you tried to reason with people like them, they would just laugh and joke about it without admitting their mistake.',
+			'p They did not believe your words.',
+			'p They did not care that you had been hurt.',
+
+			'scene study',
+			'p You are a senior in high school, and for the entirety of your life, you have been preparing yourself for MIT, the best tech school.',
+			'p You were expected to go to MIT since age 5 and in order to make your parents happy, you strived to achieve that dream.',
+			'p Your whole life you have done everything you would possibly need to please your parents and keep up with the overwhelming pressure.',
+			'p You got 1520 on the SAT, but it took 6 tries because your parents said you needed to break 1500.',
+			'p You have a 4.1 GPA and you are in a STEM club along with varsity soccer. You went to Zimbabwe last summer to teach young women to code, and you volunteer regularly.',
+			'p You have made yourself the perfect candidate for MIT and are desperately awaitin your acceptance, hoping to make your parents proud.',
+
+			'scene doorletter',
+			'centered It was a bright and early Saturday morning.',
+			'p You bounded out of bed once you heard the mail man come by, rushing to find that acceptance letter.',
+			'p You sifted through the letters until you came across one addressed to you from the school.',
+			'scene letter',
+			'p But, it was far too thin.',
+			'p Far too small.',
+
+			'scene class',
+			'p When you returned to class on Monday, you found out that two other students from your high school had been accepted...but neither stood out nearly as much as you.',
+			'p Confiding in your math teacher, he concludes that the school must have considered diversity over specs more as the only reason he could think of. He states that this is actually fairly common.',
+			'p Especially towards Asians.',
+			'p You could not believe what you were hearing.',
+			'p "But is that not discrimination in itself?! They are setting higher standards for Asians simply because of the misconception that we are innate geniuses."',
+			'Your teacher simply said that there was nothing he could do.',
+			'scene star',
+			'centered As if the weight of everything just hit you at once, you realize that there truly is nothing you could do either.',
+			'centered You have greatly disappointed your parents.',
+			'centered Not because you did not work hard.',
+			'centered But because you are Asian.',
+			'centered Because Asians. . . are expected to outdo each other.',
+			'scene black',
+			'centered Do not simply assume certain things about people just because of their background.',
+			'centered It is not fair to judge based on your own knowledge.',
+			'centered Reality Check.',
+			'centered Live life to the fullest.',
+			'end',
